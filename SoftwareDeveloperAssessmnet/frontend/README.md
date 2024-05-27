@@ -31,10 +31,12 @@ To run this project locally, follow these steps:
 2. `cd frontend`
     
 3.  `npm install`
+
+4.  `npm start`
     
-4.  The app will be served at **http://localhost:3000**.
+5.  The app will be served at **http://localhost:3000**.
     
-5.  Open your browser and navigate to **http://localhost:3000** to use the app.
+6.  Open your browser and navigate to **http://localhost:3000** to use the app.
     
 
 ## APIs Used
