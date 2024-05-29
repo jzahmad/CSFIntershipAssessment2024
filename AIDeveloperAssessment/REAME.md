@@ -26,19 +26,38 @@ Replace the detect_carrots(image) function in process_video.py with your actual 
 
 ## Example using TensorFlow:
 
-`import tensorflow as tf
+import tensorflow as tf
+
 model = tf.keras.models.load_model('path_to_your_model.h5')`
 
+
 def detect_carrots(image):
+    
     input_image = preprocess_image(image)
+    
     predictions = model.predict(input_image)
+    
     return predictions[0] > 0.5
 
+
 def preprocess_image(image):
+    
     image_resized = cv2.resize(image, (224, 224))  # Example size
+    
     image_normalized = image_resized / 255.0
+    
     return np.expand_dims(image_normalized, axis=0)`
     
 Run the script:
 
 `python process_video.py`
+
+## Explanation
+
+1- Video Capture: Uses OpenCV to open and read frames from the video file or webcam.
+
+2 - Frame Processing: Each frame is processed to detect carrots using the detect_carrots function.
+
+3- Recording Detections: If a carrot is detected, the frame number and timestamp are recorded.
+
+4- Displaying Results: Detected carrots are printed with their corresponding frame numbers and timestamps.
